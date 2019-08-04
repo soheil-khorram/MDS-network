@@ -3,9 +3,12 @@
 MDS-network
 ===========
 
+.. image:: MDS-net.png
+
 Multi-delay sinc network for predicting continuous emotion annotations from speech signal
 
-.. image:: MDS-net.png
+What is this repository?
+------------------------
 
 
 
