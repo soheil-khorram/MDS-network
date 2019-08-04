@@ -1,5 +1,13 @@
-# MDS-network
-Multi-delay sinc network for predicting continuous emotion annotations from speech signal.
+.. -*- mode: rst -*-
+
+MDS-network
+===========
+
+Multi-delay sinc network for predicting continuous emotion annotations from speech signal
+
+.. image:: MDS_net.png
+
+
 
 This repository contains python code for replicating the experiments of the following paper:
 
