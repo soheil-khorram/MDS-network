@@ -67,7 +67,7 @@ You can also write your own model. To do so, you just need to write a class that
     - lr: learning rate.
     - conv-kernel-len, conv-channel-num, conv-layer-num, sigma, delay-num, conv-l2-reg-weight, kernel-type: these some important parameters of the delay_attention model. For example, kernel-type can be gaussian or sinc and it defines the shape of the kernel used in the aligner sub-network of the MDS_network [1].
     
-I have been provided many examples in these run files. Each of them is provided to replicate one experiment of the paper [1].
+I have prepared many examples of these run files. Each of them is provided to replicate one experiment of the paper [1].
 
 References
 ----------
