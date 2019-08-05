@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 from os import makedirs
 from os.path import join, isdir
 from callbacks.metric_logger import MetricLogger
