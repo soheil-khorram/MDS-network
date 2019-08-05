@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 """A class designed for storing and using the results of model predictions."""
 
 import pickle
