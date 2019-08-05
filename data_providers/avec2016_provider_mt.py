@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 from data_provider import DataProvider
 import numpy as np
 import glob
