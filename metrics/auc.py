@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 from sklearn.metrics import roc_auc_score
 from metric import Metric
 import numpy as np
