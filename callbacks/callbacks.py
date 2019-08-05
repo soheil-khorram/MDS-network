@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 """
 Callback functions adapted from Keras deep learning library.
 """
