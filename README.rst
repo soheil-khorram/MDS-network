@@ -20,6 +20,7 @@ To use this code and replicate an experiment of [1], three modules must be writt
 * Data provider: this class manages the data usage of other parts of the code. There are some examples of data providers in the data_provider folder. The one that has been used in the experiments of the paper [1] is 'avec2016_provider.py'. I suggest to change this file and make it compatible with your dataset format. Each data provider class (such as the Avec2016Provider class) must inheret from the DataProvider class and implement following 4 functions:
 
 .. code-block:: python
+
     def load_tr(self, opts):
         """Loads the train data and returns the number of train samples."""
         pass
