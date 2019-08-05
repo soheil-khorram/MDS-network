@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 """Base class that provides data."""
 import numpy as np
 
