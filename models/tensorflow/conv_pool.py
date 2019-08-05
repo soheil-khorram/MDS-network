@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 """Class for a convolution neural network with pooling."""
 from __future__ import absolute_import
 from __future__ import division
