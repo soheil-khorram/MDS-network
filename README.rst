@@ -37,7 +37,28 @@ To use this code and replicate an experiment of [1], three modules must be writt
         """Returns the i-th sample in the form of (utts, x, y)."""
         pass
 
-* Model: 
+* Model: This repository supports for TensorFlow models. I have prepared some examples in the 'models/tensorflow' folder. 'delay_attention.py' contains the MDS-network model shown in the above figure. Most experiments of the paper [1] use the model provided by 'delay_attention.py'. As the baseline system, we implemented the downsampling/upsampling network which is provided in 'conv_deconv.py'. Also, the preliminary experiment, presented in section 4 of the paper [1], uses the model exists in 'preliminary_cnn.py'. 
+
+You can also write your own model. To do so, you just need to write a class that inherets from the 'TensorflowModel' and implements the following functions:
+
+.. code-block:: python
+
+    def construct(self):
+        """Constructs a model."""
+        pass
+
+    @staticmethod
+    def get_test_metrics():
+        """Returns a list containing all test metrics."""
+        pass
+
+    @staticmethod
+    def get_selection_metric():
+        """Returns a metric for selecting best model."""
+        pass
+
+* Run file: 
+
 
 Each run file is provided to replicate one experiment of the paper. Please feel free to contact me (Soheil Khorram), if you have any question regarding the current implementation.
 
