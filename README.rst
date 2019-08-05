@@ -15,8 +15,17 @@ This repository contains a python project that can be used to replicate the expe
 How to run it?
 --------------
 
-
-
-Khorram S., McInnis M., Provost E. M., “Jointly Aligning and Predicting Continuous Emotion Annotations”, IEEE Transactions on Affective Computing, 2019.
-
 Each run file is provided to replicate one experiment of the paper. Please feel free to contact me (Soheil Khorram), if you have any question regarding the current implementation.
+
+References
+----------
+
+.. [1] Soheil Khorram, Melvin McInnis, Emily Mower Provost,
+       *"Jointly Aligning and Predicting Continuous Emotion Annotations"*,
+       IEEE Transactions on Affective Computing, 2019. [`PDF <https://arxiv.org/pdf/1907.03050.pdf>`_]
+
+Author
+------
+
+- Soheil Khorram, 2019
+
