@@ -5,7 +5,7 @@ MDS-network
 
 .. image:: MDS-net.png
 
-Multi-delay sinc (MDS) network for predicting continuous emotion annotations from speech signal
+Multi-delay sinc (MDS) network for predicting continuous emotion annotations from speech signals
 
 What is this repository?
 ------------------------
@@ -17,7 +17,7 @@ How to run it?
 
 To use this code and replicate an experiment of [1], three modules must be written: (1) data provider, (2) model, (3) run file.
 
-* Data provider: this class manages the data usage of other parts of the code. There are some examples of data providers in the data_provider folder. The one that has been used in the experiments of the paper [1] is 'avec2016_provider.py'. I suggest to change this file and make it compatible with your dataset format. Each data provider class (such as the Avec2016Provider class) must inheret from the DataProvider class and implement following 4 functions:
+* Data provider: this class manages the data usage of other parts of the code. There are some examples of data providers in the data_provider folder. The one that has been used in the experiments of the paper [1] is 'avec2016_provider.py'. I suggest to change this file and make it compatible with your dataset format. Each data provider class (such as the Avec2016Provider class) must inherit from the DataProvider class and implement the following 4 functions:
 
 .. code-block:: python
 
@@ -39,7 +39,7 @@ To use this code and replicate an experiment of [1], three modules must be writt
 
 * Model: This repository supports for TensorFlow models. I have prepared some examples in the 'models/tensorflow' folder. 'delay_attention.py' contains the MDS-network model shown in the above figure. Most experiments of the paper [1] use the model provided by 'delay_attention.py'. As the baseline system, we implemented the downsampling/upsampling network which is provided in 'conv_deconv.py'. Also, the preliminary experiment, presented in section 4 of the paper [1], uses the model exists in 'preliminary_cnn.py'. 
 
-You can also write your own model. To do so, you just need to write a class that inherets from the 'TensorflowModel' and implements the following functions:
+You can also write your own model. To do so, you just need to write a class that inherits from the 'TensorflowModel' and implements the following functions:
 
 .. code-block:: python
 
@@ -57,10 +57,17 @@ You can also write your own model. To do so, you just need to write a class that
         """Returns a metric for selecting best model."""
         pass
 
-* Run file: 
+* Run file: in the run file, you define what data provider and what model you are going to use. You also define the parameters of the network and the parameters of the training procedure. There are many examples of the run files; Some important parameters are as follows:
 
-
-Each run file is provided to replicate one experiment of the paper. Please feel free to contact me (Soheil Khorram), if you have any question regarding the current implementation.
+    - model: is a variable that defines the type of the model (e.g., delay_attention, conv_deconv, ...).
+    - data_provider: defines the data_provider (e.g., avec2016_provider).
+    - exp-dir: results will be saved in this directory.
+    - task: it is a parameter of the avec2016_provider data provider. It can be arousal or valence.
+    - nb-epochs: number of training epochs.
+    - lr: learning rate.
+    - conv-kernel-len, conv-channel-num, conv-layer-num, sigma, delay-num, conv-l2-reg-weight, kernel-type: these some important parameters of the delay_attention model. For example, kernel-type can be gaussian or sinc and it defines the shape of the kernel used in the aligner sub-network of the MDS_network [1].
+    
+I have been provided many examples in these run files. Each of them is provided to replicate one experiment of the paper [1].
 
 References
 ----------
