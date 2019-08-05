@@ -1,3 +1,6 @@
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 """Base class for tensorflow models."""
 import tensorflow as tf
 import numpy as np
