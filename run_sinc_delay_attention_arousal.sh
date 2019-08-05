@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Author: Soheil Khorram
+# License: Simplified BSD
+
 set -e
 
 device=1
